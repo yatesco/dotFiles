@@ -60,10 +60,11 @@ function configure_fish {
 		echo "$LINE" | sudo tee -a "$FILE"
 		chsh -s `(which fish)` `(whoami)`
 		echo "Installing oh-my-fish"
+		curl -L https://get.oh-my.fish | fish
 	fi
 }
 
-#install_homebrew
+install_homebrew
 configure_email
 link_dot_files
 link_config_files
