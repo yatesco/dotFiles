@@ -59,10 +59,11 @@ function configure_fish {
 		echo "Changing shell to fish"
 		echo "$LINE" | sudo tee -a "$FILE"
 		chsh -s `(which fish)` `(whoami)`
+		echo "Installing oh-my-fish"
 	fi
 }
 
-install_homebrew
+#install_homebrew
 configure_email
 link_dot_files
 link_config_files
