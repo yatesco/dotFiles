@@ -1,0 +1,10 @@
+#!/bin/bash
+for item in $(docker ps -aq); do
+  docker stop $item
+  docker rm $item
+done
+
+for item in $(docker images --filter dangling=true -q); do
+  docker rmi $item
+done
+

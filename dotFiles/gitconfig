@@ -1,0 +1,12 @@
+[user]
+  name = Colin Yates
+  email = colin@colinyates.co.uk
+[push]
+  default = simple
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[core]
+  autocrlf = input
+  excludesFile = /Users/coliny/.gitignore_global
