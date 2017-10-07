@@ -42,6 +42,7 @@ brew "d12frosted/emacs-plus/emacs-plus", args: ["with-natural-title-bar"]
 cask "calibre"
 cask "cyberduck"
 cask "dash"
+cask "docker"
 cask "virtualbox"
 cask "caskroom/fonts/font-fira-code"
 cask "caskroom/fonts/font-menlo-for-powerline"
