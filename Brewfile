@@ -38,7 +38,7 @@ brew "tree"
 brew "vim", args: ["with-gettext", "with-lua", "with-override-system-vi"]
 brew "w3m"
 brew "watch"
-brew "d12frosted/emacs-plus/emacs-plus", args: ["with-natural-title-bar"]
+brew "emacs", args: ["--srgb"]
 cask "calibre"
 cask "cyberduck"
 cask "dash"
@@ -48,3 +48,4 @@ cask "caskroom/fonts/font-fira-code"
 cask "caskroom/fonts/font-menlo-for-powerline"
 cask "caskroom/fonts/font-source-code-pro"
 cask "caskroom/versions/java8"
+cask "iterm2"
