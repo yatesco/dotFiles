@@ -1,4 +1,6 @@
 ##################################################
+# Home
+##################################################
 IMAPAccount gmail
 Host imap.gmail.com
 User colin.yates@gmail.com
@@ -71,7 +73,7 @@ Channel gmail-sent
 Channel gmail-trash
 
 ###########################################################################
-### Fastmail
+# Fastmail
 ###########################################################################
 IMAPAccount fastmail
 Host imap.fastmail.com
@@ -118,8 +120,9 @@ SyncState *
 
 Group fastmail
 Channel fastmail-inbox
+
 ###########################################################################
-### Work
+# Work
 ###########################################################################
 IMAPAccount work
 Host imap.gmail.com
