@@ -41,7 +41,7 @@
 (require 'cy-mail)
 (require 'cy-projectile)
 (require 'cy-ui)
-(require 'cy-solarized-dark-theme)
+(require 'cy-zenburn-theme)
 (require 'cy-version-control)
 (require 'cy-yasnippets)
 
