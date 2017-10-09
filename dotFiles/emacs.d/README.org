@@ -1,0 +1,12 @@
+# About
+Here be dragons!
+
+This is my emacs configuration, cobbled together from various places on the internet. 
+
+If you are looking for inspiration on idiomatic emacs maintenance, look elsewhere. In fact, to be blunt, if you are looking here for inspiration you would be a lot better off looking at https://spacemacs.org.
+
+It is also strongly recommended to use `iterm` rather than `Terminal.app`. Of note is the fact the cursor _won't_ change depending on the evil state in `Terminal.app`.
+
+Modules are stored in `.emacs.d/elisp`. To edit or create a module `SPC f e m`.
+
+Above all, peace

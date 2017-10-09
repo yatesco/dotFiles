@@ -39,15 +39,6 @@ function link_config_files {
         popd > /dev/null
 }
 
-function checkout_emacs {
-	if [ -d ~/.emacs.d ]; then
-		echo ".emacs.d is already cloned"
-        else
-		echo "Cloning .emacs.d"
-        	git clone https://github.com/yatesco/dotEmacs.git ~/.emacs.d 
-	fi
-}
-
 function configure_fish {
 	local LINE=`(which fish)`
 	local FILE=/etc/shells
@@ -68,5 +59,4 @@ install_homebrew
 configure_email
 link_dot_files
 link_config_files
-checkout_emacs
 configure_fish

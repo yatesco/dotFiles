@@ -1,1 +1,1 @@
-/Users/coliny/.local/share/omf/themes/default/fish_prompt.fish
+/Users/coliny/.local/share/omf/themes/agnoster/fish_prompt.fish
