@@ -33,7 +33,7 @@
 ;;; Code:
 
 (use-package projectile
-  :delight projectile-mode
+  :diminish projectile-mode
   :init
   :config
   (projectile-global-mode)
