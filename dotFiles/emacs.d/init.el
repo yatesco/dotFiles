@@ -1,3 +1,9 @@
+;; upgrade org-mode before all else
+(add-to-list 'load-path "~/.emacs.d/vendor/org-9.1.2/lisp")
+(add-to-list 'load-path "~/.emacs.d/vendor/org-9.1.2/contrib" t)
+;; WARNING - for efficiency it is highly recommended to run `make
+;; compile` in the org-mode directory
+
 ;; set up the various repositories
 (setq package-archives
       '(("GNU ELPA"     . "http://elpa.gnu.org/packages/")
