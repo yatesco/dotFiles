@@ -41,17 +41,18 @@
 ;; hide some uninteresting modes in the modeline that aren't loaded by (use-package)
 (diminish 'undo-tree-mode)
 
+;; TODO - disabling until https://github.com/yatesco/dotFiles/issues/12 is fixed
 ;; this could validly live here or in in cy-evil.
 ;; (unless (display-graphic-p)
 ;;   (use-package evil-terminal-cursor-changer
 ;;       :ensure t
 ;;       :config
-;;       (etcc-on)
 ;;       (setq evil-motion-state-cursor 'box)  ; █
 ;;       (setq evil-visual-state-cursor 'box)  ; █
 ;;       (setq evil-normal-state-cursor 'box)  ; █
 ;;       (setq evil-insert-state-cursor 'bar)  ; ⎸
 ;;       (setq evil-emacs-state-cursor  'hbar) ; _
+;;       (etcc-on)
 ;;       ))
 
 (provide 'cy-ui)
