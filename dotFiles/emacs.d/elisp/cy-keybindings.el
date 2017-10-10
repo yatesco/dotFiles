@@ -53,6 +53,7 @@
   
   "g" '(magit-status :which-key "Magit status")
   "n" '(neotree-project-dir :which-key "Neotree")
+  "s" 'swiper
 
   "u" '(undo-tree-visualize :which-key "Undo tree")
 
