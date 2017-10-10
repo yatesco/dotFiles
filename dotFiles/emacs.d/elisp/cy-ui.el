@@ -42,17 +42,17 @@
 (diminish 'undo-tree-mode)
 
 ;; this could validly live here or in in cy-evil.
-(unless (display-graphic-p)
-  (use-package evil-terminal-cursor-changer
-      :ensure t
-      :config
-      (etcc-on)
-      (setq evil-motion-state-cursor 'box)  ; █
-      (setq evil-visual-state-cursor 'box)  ; █
-      (setq evil-normal-state-cursor 'box)  ; █
-      (setq evil-insert-state-cursor 'bar)  ; ⎸
-      (setq evil-emacs-state-cursor  'hbar) ; _
-      ))
+;; (unless (display-graphic-p)
+;;   (use-package evil-terminal-cursor-changer
+;;       :ensure t
+;;       :config
+;;       (etcc-on)
+;;       (setq evil-motion-state-cursor 'box)  ; █
+;;       (setq evil-visual-state-cursor 'box)  ; █
+;;       (setq evil-normal-state-cursor 'box)  ; █
+;;       (setq evil-insert-state-cursor 'bar)  ; ⎸
+;;       (setq evil-emacs-state-cursor  'hbar) ; _
+;;       ))
 
 (provide 'cy-ui)
 

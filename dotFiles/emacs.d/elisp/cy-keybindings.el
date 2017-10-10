@@ -46,6 +46,10 @@
   ";" 'evilnc-comment-or-uncomment-lines
   "TAB" 'mode-line-other-buffer	; jump between buffers
   "/" 'counsel-projectile-ag
+
+  "a" '(:ignore t :which-key "Applications")
+  "ad" 'deft
+  "am" '(cy/mu4e-start :which-key "mu4e")
   
   "g" '(magit-status :which-key "Magit status")
   "n" '(neotree-project-dir :which-key "Neotree")

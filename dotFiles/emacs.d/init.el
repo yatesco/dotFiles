@@ -33,6 +33,7 @@
 (require 'cy-functions)
 ;; now the various packages
 (require 'cy-clojure)
+(require 'cy-deft)
 (require 'cy-yaml)
 (require 'cy-company)
 (require 'cy-evil)
