@@ -106,4 +106,5 @@ PERL_LOCAL_LIB_ROOT="/Users/coliny/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB
 PERL_MB_OPT="--install_base \"/Users/coliny/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/coliny/perl5"; export PERL_MM_OPT;
 
+export ALTERNATE_EDITOR="" # so emacsclient auto starts a daemon
 source ~/.zsh_secret
