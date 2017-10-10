@@ -32,6 +32,11 @@
 
 ;;; Code:
 
+;; So, er, there isn't actually any code here. It turns out emacs
+;; _sucks_ at handling terminal colours properly so for the best
+;; experience run Solarized Light in your (iterm) terminal and have
+;; _no_ emacs theme.
+
 ;; (use-package color-theme-solarized
 ;;   :ensure t
 ;;   :config

@@ -39,19 +39,19 @@ function link_config_files {
         popd > /dev/null
 }
 
-function configure_fish {
-	local LINE=`(which fish)`
+function configure_zsh {
+	local LINE=`(which zsh)`
 	local FILE=/etc/shells
-	# assume that if fish is already a valid shell then we have already installed this.
+	# assume that if zsh is already a valid shell then we have already installed this.
 	local INSTALLED_P=`(grep "$LINE" $FILE)`
 	if [[ $INSTALLED_P ]]; then
-		echo "Fish already appears to be configured"
+		echo "Zsh already appears to be configured"
 	else
-		echo "Changing shell to fish"
+		echo "Changing shell to zsh"
 		echo "$LINE" | sudo tee -a "$FILE"
-		chsh -s `(which fish)` `(whoami)`
-		echo "Installing oh-my-fish"
-		curl -L https://get.oh-my.fish | fish
+		chsh -s `(which zsh)` `(whoami)`
+		echo "Installing oh-my-zsh"
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	fi
 }
 
@@ -59,4 +59,4 @@ install_homebrew
 configure_email
 link_dot_files
 link_config_files
-configure_fish
+configure_zsh
