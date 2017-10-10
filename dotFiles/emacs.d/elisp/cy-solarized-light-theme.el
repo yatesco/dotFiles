@@ -1,4 +1,4 @@
-;;; cy-solarized-dark-theme.el --- Configuration for the solarized dark theme
+;;; cy-solarized-light-theme.el --- Configuration for the solarized light theme
 
 ;; Copyright © 2011-2017 Colin Yates
 ;;
@@ -11,7 +11,7 @@
 
 ;;; Commentary:
 
-;; Configuration for the solarized dark theme
+;; Configuration for the solarized light theme
 
 ;;; License:
 
@@ -43,6 +43,6 @@
 ;; 		(set-terminal-parameter frame 'background-mode mode))
 ;; 	      (load-theme 'solarized t))))
 
-(provide 'cy-solarized-dark-theme)
+(provide 'cy-solarized-light-theme)
 
-;;; cy-solarized-dark-theme.el ends here
+;;; cy-solarized-light-theme.el ends here
