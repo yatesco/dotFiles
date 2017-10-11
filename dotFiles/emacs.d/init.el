@@ -36,6 +36,7 @@
 (require 'cy-deft)
 (require 'cy-yaml)
 (require 'cy-company)
+(require 'cy-hugo-blog)
 (require 'cy-evil)
 (require 'cy-fish)
 (require 'cy-ivy)
