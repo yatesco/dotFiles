@@ -42,6 +42,7 @@
 (require 'cy-ivy)
 (require 'cy-mail)
 (require 'cy-projectile)
+(require 'cy-project-tree)
 (require 'cy-ui)
 (require 'cy-base16-harmonic-light-theme)
 (require 'cy-version-control)

@@ -32,43 +32,38 @@
 
 ;;; Code:
 
-;; inspired by http://nadeemkhedr.com/emacs-tips-and-best-plugins-to-use-with-evil-mode/
-(use-package neotree
+(use-package treemacs
+  :defer t
   :ensure t
   :config
+  (progn
+    (use-package treemacs-evil
+      :ensure t
+      :demand t
+      :defer t
+      :config
+      ;; consistency - 'q' quits
+      (evil-define-key 'normal treemacs-mode-map (kbd "q") 'treemacs-projectile-toggle))
+    (setq treemacs-follow-after-init          t
+          treemacs-width                      35
+          treemacs-indentation                2
+          treemacs-git-integration            t
+          treemacs-collapse-dirs              3
+          treemacs-silent-refresh             nil
+          treemacs-change-root-without-asking nil
+          treemacs-sorting                    'alphabetic-desc
+          treemacs-show-hidden-files          t
+          treemacs-never-persist              nil
+          treemacs-is-never-other-window      nil
+          treemacs-goto-tag-strategy          'refetch-index)
+    (treemacs-follow-mode t)
+    (treemacs-filewatch-mode t)))
 
-    (evil-leader/set-key
-    "m"  'neotree-toggle
-    "n"  'neotree-project-dir)
+(use-package treemacs-projectile
+  :ensure t
+  :config
+  (setq treemacs-header-function #'treemacs-projectile-create-header))
 
-  (setq projectile-switch-project-action 'neotree-projectile-action)
-  (add-hook 'neotree-mode-hook
-    (lambda ()
-      (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-      (define-key evil-normal-state-local-map (kbd "I") 'neotree-hidden-file-toggle)
-      (define-key evil-normal-state-local-map (kbd "z") 'neotree-stretch-toggle)
-      (define-key evil-normal-state-local-map (kbd "R") 'neotree-refresh)
-      (define-key evil-normal-state-local-map (kbd "m") 'neotree-rename-node)
-      (define-key evil-normal-state-local-map (kbd "c") 'neotree-create-node)
-      (define-key evil-normal-state-local-map (kbd "d") 'neotree-delete-node)
-
-      (define-key evil-normal-state-local-map (kbd "s") 'neotree-enter-vertical-split)
-      (define-key evil-normal-state-local-map (kbd "S") 'neotree-enter-horizontal-split)
-
-      (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter))))
-
-(use-package find-file-in-project :ensure t)
-
-(defun neotree-project-dir ()
-  "Open NeoTree using the git root."
-  (interactive)
-  (let ((project-dir (ffip-project-root))
-        (file-name (buffer-file-name)))
-    (if project-dir
-        (progn
-        (neotree-dir project-dir)
-        (neotree-find file-name))
-    (message "Could not find git project root."))))
 (provide 'cy-project-tree)
 
 ;;; cy-project-tree.el ends here

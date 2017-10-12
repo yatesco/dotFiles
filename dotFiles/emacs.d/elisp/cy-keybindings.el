@@ -52,7 +52,7 @@
   "am" '(cy/mu4e-start :which-key "mu4e")
   
   "g" '(magit-status :which-key "Magit status")
-  "n" '(neotree-project-dir :which-key "Neotree")
+  "t" '(treemacs-projectile-toggle :which-key "Treemacs")
   "s" 'swiper
 
   "u" '(undo-tree-visualize :which-key "Undo tree")
