@@ -38,9 +38,9 @@
   :config
   (progn
     (use-package treemacs-evil
+      :defer t
       :ensure t
       :demand t
-      :defer t
       :config
       ;; consistency - 'q' quits
       (evil-define-key 'normal treemacs-mode-map (kbd "q") 'treemacs-projectile-toggle))
@@ -60,6 +60,7 @@
     (treemacs-filewatch-mode t)))
 
 (use-package treemacs-projectile
+  :defer t
   :ensure t
   :config
   (setq treemacs-header-function #'treemacs-projectile-create-header))
