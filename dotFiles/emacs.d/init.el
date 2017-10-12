@@ -43,10 +43,7 @@
 (require 'cy-mail)
 (require 'cy-projectile)
 (require 'cy-ui)
-;; (require 'cy-leuven-theme)
-;; (require 'cy-solarized-light-theme)
-;; (require 'cy-solarized-dark-theme)
-(require 'cy-zenburn-theme)
+(require 'cy-base16-harmonic-light-theme)
 (require 'cy-version-control)
 (require 'cy-yasnippets)
 
