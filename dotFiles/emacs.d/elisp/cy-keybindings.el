@@ -46,17 +46,16 @@
   ";" 'evilnc-comment-or-uncomment-lines
   "TAB" 'mode-line-other-buffer	; jump between buffers
   "/" 'counsel-projectile-ag
-
+  "g" '(magit-status :which-key "Magit status")
+  "t" '(treemacs-projectile-toggle :which-key "Treemacs")
+  "s" 'swiper
+  "u" '(undo-tree-visualize :which-key "Undo tree")
+  "w" 'ace-window
+  
   "a" '(:ignore t :which-key "Applications")
   "ad" 'deft
   "am" '(cy/mu4e-start :which-key "mu4e")
   
-  "g" '(magit-status :which-key "Magit status")
-  "t" '(treemacs-projectile-toggle :which-key "Treemacs")
-  "s" 'swiper
-
-  "u" '(undo-tree-visualize :which-key "Undo tree")
-
   "b" '(:ignore t :which-key "Buffers")
   "bb" '(ivy-switch-buffer :which-key "switch buffers")
   "bk" 'kill-this-buffer
@@ -68,6 +67,10 @@
   "fei" 'cy/edit-init-el
   "fek" 'cy/edit-keybindings-el
   "fem" 'cy/counsel-select-module
+
+  ;; TODO - this needs to be put into a more specific "sp" mode
+  ;; "H" '(:ignore t :which-key "Hydras") 
+  ;; "Hl" '(hydra-lisp/body :which-key "Lisp")
 
   "o" 'counsel-imenu
 
@@ -90,9 +93,31 @@
 (general-define-key :prefix ","
 		    :states '(normal motion visual) 
 		    :keymaps 'clojure-mode-map
-		    "eb" 'eval-buffer
-		    "ed" 'eval-defun
+
+		    "eb" 'cider-eval-buffer
+		    "ed" 'cider-eval-last-sexp
 		    )
+
+;; ;; a hydra for navigating lisp
+;; (defhydra hydra-lisp (:color pink
+;; 			     :hint nil)
+;;   "
+;; ^Move^         ^Barf/Slurp^      
+;; ^^^^^^^^----------------------------
+;; _h_: left      _(<_ slurp left
+;; _j_: down      _(>_: barf left
+;; _k_: up        _>)_: slurp forward 
+;; _l_: right     _<)_: barf forward"
+;;   ("h" sp-up-sexp)
+;;   ("j" sp-previous-sexp)
+;;   ("k" sp-next-sexp)
+;;   ("l" sp-down-sexp)
+;;   ("(<" sp-backward-slurp-sexp)
+;;   ("(>" sp-backward-barf-sexp)
+;;   (">)" sp-forward-slurp-sexp)
+;;   ("<)" sp-forward-barf-sexp)
+
+;;   ("q" quit-window "quit" :color blue))
 
 (provide 'cy-keybindings)
 

@@ -95,6 +95,10 @@
 ;; get rid of the hideous splash screen
 (setq inhibit-startup-screen t)
 
+;; jump to numbered windows
+(use-package ace-window
+  :commands (ace-window))
+
 (provide 'cy-defaults)
 
 ;;; cy-defaults.el ends here
