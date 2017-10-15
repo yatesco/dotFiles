@@ -99,6 +99,10 @@
 (use-package ace-window
   :commands (ace-window))
 
+;; jump to any character
+(use-package avy
+  :commands (avy-goto-char))
+
 (provide 'cy-defaults)
 
 ;;; cy-defaults.el ends here

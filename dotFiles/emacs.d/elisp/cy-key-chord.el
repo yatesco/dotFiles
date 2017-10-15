@@ -1,4 +1,4 @@
-;;; cy-evil.el --- VIM to the rescue
+;;; cy-key-chord.el --- Key-chords to save those precious typing
 
 ;; Copyright © 2011-2017 Colin Yates
 ;;
@@ -11,7 +11,7 @@
 
 ;;; Commentary:
 
-;; Modal editing rocks.
+;; Key-chords to save those precious typing
 
 ;;; License:
 
@@ -31,21 +31,15 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-
-;; VIM for the win
-(use-package evil
-  :init
-  ;; preserve tab in the terminal
-  (setq evil-want-C-i-jump nil)
+(use-package key-chord
+  :ensure t
   :config
-  (evil-mode 1))
+  (setq key-chord-two-keys-delay 0.1
+	key-chord-one-key-delay 0.2)
+  (key-chord-mode 1))
 
-;; add in some useful evil plugins
-(use-package evil-nerd-commenter)
-(use-package evil-surround
-  :config
-  (global-evil-surround-mode 1))
+;; see keybindings for chords
 
-(provide 'cy-evil)
+(provide 'cy-key-chord)
 
-;;; cy-evil.el ends here
+;;; cy-key-chord.el ends here

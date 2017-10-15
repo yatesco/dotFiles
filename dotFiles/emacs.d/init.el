@@ -30,6 +30,7 @@
 
 ;; setup some sensible defaults
 (require 'cy-defaults)
+(require 'cy-key-chord)
 (require 'cy-functions)
 ;; now the various packages
 (require 'cy-clojure)

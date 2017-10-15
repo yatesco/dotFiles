@@ -47,6 +47,7 @@
   "TAB" 'mode-line-other-buffer	; jump between buffers
   "/" 'counsel-projectile-ag
   "g" '(magit-status :which-key "Magit status")
+  "jj" 'avy-goto-char
   "t" '(treemacs-projectile-toggle :which-key "Treemacs")
   "s" 'swiper
   "u" '(undo-tree-visualize :which-key "Undo tree")
@@ -77,9 +78,14 @@
   "p" (general-simulate-keys
        "C-c p" t
        "Projectile"
-       general-SPC-simulates-C-c-p)
+       general-SPC-simulates-C-c-p)) 
 
-  ) 
+;; -------------------------------------------------- 
+;; Key-chords
+(key-chord-define evil-insert-state-map "jj" 'avy-goto-char)
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "bb" 'ivy-switch-buffer)
+(key-chord-define evil-insert-state-map "ss" 'save-buffer)
 
 ;; -------------------------------------------------- 
 ;; emacs-lisp bindings
