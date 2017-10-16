@@ -85,7 +85,7 @@
 (key-chord-define evil-insert-state-map "jj" 'avy-goto-char)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (key-chord-define evil-insert-state-map "bb" 'ivy-switch-buffer)
-(key-chord-define evil-insert-state-map "ss" 'save-buffer)
+(key-chord-define evil-insert-state-map "zz" 'save-buffer)
 
 ;; -------------------------------------------------- 
 ;; emacs-lisp bindings
