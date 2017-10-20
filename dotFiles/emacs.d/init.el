@@ -32,6 +32,7 @@
 (require 'cy-defaults)
 (require 'cy-key-chord)
 (require 'cy-functions)
+(require 'cy-line-handling)
 ;; now the various packages
 (require 'cy-clojure)
 (require 'cy-deft)

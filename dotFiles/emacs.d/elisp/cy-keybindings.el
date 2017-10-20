@@ -48,7 +48,7 @@
   "/" 'counsel-projectile-ag
   "g" '(magit-status :which-key "Magit status")
   "jj" 'avy-goto-char
-  "t" '(treemacs-projectile-toggle :which-key "Treemacs")
+  "d" '(treemacs-projectile-toggle :which-key "Treemacs")
   "s" 'swiper
   "u" '(undo-tree-visualize :which-key "Undo tree")
   "w" 'ace-window
@@ -78,7 +78,11 @@
   "p" (general-simulate-keys
        "C-c p" t
        "Projectile"
-       general-SPC-simulates-C-c-p)) 
+       general-SPC-simulates-C-c-p)
+
+  "t" '(:ignore t :which-key "Toggle")
+  "tl" 'linum-relative-toggle
+  )
 
 ;; -------------------------------------------------- 
 ;; Key-chords
