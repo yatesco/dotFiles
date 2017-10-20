@@ -32,8 +32,8 @@
 
 ;;; Code:
 (use-package linum-relative :commands (linum-relative-mode))
-(add-hook 'text-mode-hook #'linum-relative-mode)
-(add-hook 'prog-mode-hook #'linum-relative-mode)
+(add-hook 'text-mode-hook #'linum-mode)
+(add-hook 'prog-mode-hook #'linum-mode)
 
 (provide 'cy-line-handling)
 
