@@ -46,6 +46,10 @@
   :config
   (global-evil-surround-mode 1))
 
+;; let special modes (e.g. the Warnings buffer) start in emacs
+(with-eval-after-load 'evil
+  (evil-set-initial-state 'special-mode 'insert))
+
 (provide 'cy-evil)
 
 ;;; cy-evil.el ends here
