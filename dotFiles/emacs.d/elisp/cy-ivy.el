@@ -52,7 +52,12 @@
   ;; counsel-ivy doesn't sort M-x by most frequently used, let's pull in
   ;; smex to do that bring in the swoop
   (use-package smex)
-  (use-package swiper))
+  (use-package swiper)
+
+  ;; allow nuclear editing as well!
+  ;; TIP: `C-c C-o' in search result then `C-c C-q'
+  (use-package wgrep :ensure t)
+  )
 
 (provide 'cy-ivy)
 
