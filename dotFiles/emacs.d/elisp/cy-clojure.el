@@ -35,11 +35,17 @@
 (use-package clojure-mode
   :defer t
   :config
-  (use-package clojure-mode-extra-font-locking)
-  (use-package clj-refactor))
+  (use-package clojure-mode-extra-font-locking :ensure t)
+  (use-package clj-refactor)
+  ;; flycheck-joker to the (quality assurance) rescue
+  (use-package flycheck-joker))
 
-;; flycheck-joker to the (quality assurance) rescue
-(use-package flycheck-joker)
+(with-eval-after-load 'clojure
+  ;; as recommended https://github.com/clojure-emacs/clj-refactor.el
+  (add-hook 'clojure-mode-hook (lambda ()
+				 (clj-refactor-mode 1)
+				 (yas-minor-mode 1)
+				 (cljr-add-keybindings-with-prefix "C-c C-m"))))
 
 (provide 'cy-clojure)
 
