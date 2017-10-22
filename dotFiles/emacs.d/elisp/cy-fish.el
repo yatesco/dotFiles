@@ -31,7 +31,7 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-(use-package fish-mode)
+(use-package fish-mode :defer t)
 
 (provide 'cy-fish)
 
