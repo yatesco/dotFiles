@@ -36,7 +36,8 @@
   :defer t
   :config
   (use-package clojure-mode-extra-font-locking :ensure t)
-  (use-package clj-refactor)
+  ;; Temporarily commented out due to https://github.com/yatesco/dotFiles/issues/26
+  ;; (use-package clj-refactor)
   ;; flycheck-joker to the (quality assurance) rescue
   (use-package flycheck-joker))
 
