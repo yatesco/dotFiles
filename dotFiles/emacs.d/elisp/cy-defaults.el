@@ -101,7 +101,7 @@
 
 ;; jump to any character
 (use-package avy
-  :commands (avy-goto-char))
+  :commands (avy-goto-char-timer))
 
 (provide 'cy-defaults)
 

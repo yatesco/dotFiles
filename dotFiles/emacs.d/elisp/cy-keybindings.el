@@ -47,7 +47,7 @@
   "TAB" 'mode-line-other-buffer	; jump between buffers
   "/" 'counsel-projectile-ag
   "g" '(magit-status :which-key "Magit status")
-  "jj" 'avy-goto-char
+  "jj" 'avy-goto-char-timer
   "d" '(treemacs-projectile-toggle :which-key "Treemacs")
   "s" 'swiper
   "u" '(undo-tree-visualize :which-key "Undo tree")
