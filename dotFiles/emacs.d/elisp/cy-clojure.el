@@ -36,12 +36,16 @@
   :defer t
   :config
   (use-package clojure-mode-extra-font-locking :ensure t)
-  (use-package cider)
+  (use-package cider
+    :config
+    (setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))"))
   ;; Temporarily commented out due to https://github.com/yatesco/dotFiles/issues/26
   (use-package clj-refactor)
   ;; flycheck-joker to the (quality assurance) rescue
   (use-package flycheck-joker)
-  (use-package clojure-snippets))
+  (use-package clojure-snippets)
+
+  (evil-define-key 'normal cider-popup-buffer-mode-map (kbd "q") 'quit-window))
 
 (with-eval-after-load 'clojure
   ;; as recommended https://github.com/clojure-emacs/clj-refactor.el
