@@ -39,7 +39,6 @@
   (use-package cider
     :config
     (setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))"))
-  ;; Temporarily commented out due to https://github.com/yatesco/dotFiles/issues/26
   (use-package clj-refactor)
   ;; flycheck-joker to the (quality assurance) rescue
   (use-package flycheck-joker)
