@@ -47,7 +47,8 @@
   ;; TODO - how to iterate a sequence. Or, how to find all the modes defined by a package?
   (evil-define-key 'normal cider-popup-buffer-mode-map (kbd "q") 'cider-popup-buffer-quit)
   (evil-define-key 'normal cider-test-report-mode-map (kbd "q") 'cider-popup-buffer-quit)
-  (evil-define-key 'normal cider-docview-mode-map (kbd "q") 'cider-popup-buffer-quit))
+  (evil-define-key 'normal cider-docview-mode-map (kbd "q") 'cider-popup-buffer-quit)
+  (evil-define-key 'normal cider-stacktrace-mode-map (kbd "q") 'cider-popup-buffer-quit))
 
 (with-eval-after-load 'clojure
   ;; as recommended https://github.com/clojure-emacs/clj-refactor.el
