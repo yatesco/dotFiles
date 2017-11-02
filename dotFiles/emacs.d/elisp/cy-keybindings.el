@@ -75,10 +75,10 @@
 
   "o" 'counsel-imenu
 
-  "p" (general-simulate-keys
-       "C-c p" t
-       "Projectile"
-       general-SPC-simulates-C-c-p)
+ "p" (general-simulate-keys
+      "C-c p" t
+      nil
+      "Projectile")
 
   "t" '(:ignore t :which-key "Toggle")
   "tl" 'linum-relative-toggle
