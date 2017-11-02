@@ -75,10 +75,7 @@
 
   "o" 'counsel-imenu
 
- "p" (general-simulate-keys
-      "C-c p" t
-      nil
-      "Projectile")
+  "p" '(:keymap :projectile-command-map :wk "Projectile") 
 
   "t" '(:ignore t :which-key "Toggle")
   "tl" 'linum-relative-toggle
