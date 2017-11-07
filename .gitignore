@@ -6,3 +6,4 @@
 /dotFiles/emacs.d/recentf
 /dotFiles/emacs.d/bookmarks
 .yas-compiled-snippets.el
+configFiles/nvim/.netrwhist
