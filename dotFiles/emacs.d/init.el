@@ -46,7 +46,8 @@
 (require 'cy-projectile)
 (require 'cy-project-tree)
 (require 'cy-ui)
-(require 'cy-base16-harmonic-light-theme)
+;; (require 'cy-base16-harmonic-light-theme)
+(require 'cy-zenburn-theme)
 (require 'cy-version-control)
 (require 'cy-yasnippets)
 
