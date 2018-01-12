@@ -37,6 +37,8 @@
   :config
   (load-theme 'zenburn t))
 
+(global-hl-line-mode t)
+
 (provide 'cy-zenburn-theme)
 
 ;;; cy-zenburn-theme.el ends here

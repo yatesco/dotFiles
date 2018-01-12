@@ -25,15 +25,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'NLKNguyen/papercolor-theme'
+"Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
-set background=light
-colorscheme PaperColor
+"set background=light
+"colorscheme PaperColor
+colors zenburn
 
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 2
