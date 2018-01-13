@@ -43,7 +43,7 @@
 ;; integrate with counsel
 (use-package counsel-projectile
   :config
-  (counsel-projectile-on))
+  (counsel-projectile-mode))
 
 (provide 'cy-projectile)
 

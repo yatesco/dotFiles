@@ -35,7 +35,9 @@
 (use-package zenburn-theme
   :ensure t
   :config
-  (load-theme 'zenburn t))
+  (load-theme 'zenburn t)
+  ;; configure avy to dim the background when jumping
+  (setq avy-background t))
 
 (global-hl-line-mode t)
 

@@ -103,6 +103,9 @@
 (use-package avy
   :commands (avy-goto-char-timer))
 
+;; tidy up whitespace
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
 (provide 'cy-defaults)
 
 ;;; cy-defaults.el ends here

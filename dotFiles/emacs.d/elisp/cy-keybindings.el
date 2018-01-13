@@ -32,13 +32,13 @@
 
 ;;; Code:
 
-;; -------------------------------------------------- 
+;; --------------------------------------------------
 ;; SPC is the global leader
 ;; let's use the excellent 'general'
 (use-package general
   :ensure t
   :config
-  (general-evil-setup)) 
+  (general-evil-setup))
 
 ;; global (i.e. none mode specific)
 (general-nvmap :prefix "SPC"
@@ -52,53 +52,53 @@
   "s" 'swiper
   "u" '(undo-tree-visualize :which-key "Undo tree")
   "w" 'ace-window
-  
+
   "a" '(:ignore t :which-key "Applications")
   "ad" 'deft
   "am" '(cy/mu4e-start :which-key "mu4e")
-  
+
   "b" '(:ignore t :which-key "Buffers")
   "bb" '(ivy-switch-buffer :which-key "switch buffers")
   "bk" 'kill-this-buffer
   "bR" 'revert-buffer
-  
+
   "c" 'org-capture
-  
+
   "fed" 'cy/edit-defaults-el
   "fei" 'cy/edit-init-el
   "fek" 'cy/edit-keybindings-el
   "fem" 'cy/counsel-select-module
 
   ;; TODO - this needs to be put into a more specific "sp" mode
-  ;; "H" '(:ignore t :which-key "Hydras") 
+  ;; "H" '(:ignore t :which-key "Hydras")
   ;; "Hl" '(hydra-lisp/body :which-key "Lisp")
 
   "o" 'counsel-imenu
 
-  "p" '(:keymap :projectile-command-map :wk "Projectile") 
+  "p" '(:keymap projectile-command-map :wk "Projectile")
 
   "t" '(:ignore t :which-key "Toggle")
   "tl" 'linum-relative-toggle
   )
 
-;; -------------------------------------------------- 
+;; --------------------------------------------------
 ;; Key-chords
 (key-chord-define evil-insert-state-map "jj" 'avy-goto-char)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (key-chord-define evil-insert-state-map "bb" 'ivy-switch-buffer)
 (key-chord-define evil-insert-state-map "zz" 'save-buffer)
 
-;; -------------------------------------------------- 
+;; --------------------------------------------------
 ;; emacs-lisp bindings
 (general-define-key :prefix ","
-		    :states '(normal motion visual) 
+		    :states '(normal motion visual)
 		    :keymaps 'emacs-lisp-mode-map
 		    "eb" 'eval-buffer
 		    "ed" 'eval-defun)
 
 ;; clojure? bindings
 (general-define-key :prefix ","
-		    :states '(normal motion visual) 
+		    :states '(normal motion visual)
 		    :keymaps 'clojure-mode-map
 
 		    "eb" 'cider-eval-buffer
@@ -107,13 +107,13 @@
 
 ;; ;; a hydra for navigating lisp
 ;; (defhydra hydra-lisp (:color pink
-;; 			     :hint nil)
+;;			     :hint nil)
 ;;   "
-;; ^Move^         ^Barf/Slurp^      
+;; ^Move^         ^Barf/Slurp^
 ;; ^^^^^^^^----------------------------
 ;; _h_: left      _(<_ slurp left
 ;; _j_: down      _(>_: barf left
-;; _k_: up        _>)_: slurp forward 
+;; _k_: up        _>)_: slurp forward
 ;; _l_: right     _<)_: barf forward"
 ;;   ("h" sp-up-sexp)
 ;;   ("j" sp-previous-sexp)
