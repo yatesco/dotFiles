@@ -38,10 +38,14 @@
 (use-package general
   :ensure t
   :config
-  (general-evil-setup))
+  (general-evil-setup)
+  )
 
 ;; global (i.e. none mode specific)
-(general-nvmap :prefix "SPC"
+;; (general-def :states '(normal motion emacs) :keymaps '(normal motion visual) "SPC" nil)
+(general-define-key :prefix "<SPC>"
+		    :states '(normal visual)
+		    :keymaps 'global-map
   "<SPC>" 'counsel-M-x
   ";" 'evilnc-comment-or-uncomment-lines
   "TAB" 'mode-line-other-buffer	; jump between buffers

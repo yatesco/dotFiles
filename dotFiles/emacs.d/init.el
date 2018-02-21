@@ -7,12 +7,12 @@
 ;; set up the various repositories
 (setq package-archives
       '(("GNU ELPA"     . "http://elpa.gnu.org/packages/")
-        ("MELPA Stable" . "https://stable.melpa.org/packages/")
-        ("MELPA"        . "https://melpa.org/packages/"))
+	("MELPA Stable" . "https://stable.melpa.org/packages/")
+	("MELPA"        . "https://melpa.org/packages/"))
       package-archive-priorities
       '(("MELPA Stable" . 10)
-        ("GNU ELPA"     . 5)
-        ("MELPA"        . 0)))
+	("GNU ELPA"     . 5)
+	("MELPA"        . 0)))
 (package-initialize)
 ;; use use-package
 (unless (package-installed-p 'use-package)
@@ -38,11 +38,11 @@
 (require 'cy-deft)
 (require 'cy-yaml)
 (require 'cy-company)
-(require 'cy-hugo-blog)
+;; (require 'cy-hugo-blog)
 (require 'cy-evil)
 (require 'cy-fish)
 (require 'cy-ivy)
-(require 'cy-mail)
+;;(require 'cy-mail)
 (require 'cy-projectile)
 (require 'cy-project-tree)
 (require 'cy-ui)
@@ -68,4 +68,3 @@
 ;; let everyone know we are done
 (message (concat "Emacs loaded in " (emacs-init-time) ", go wild!"))
 (message "Go wild!")
-
