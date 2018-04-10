@@ -14,6 +14,13 @@
 	("GNU ELPA"     . 5)
 	("MELPA"        . 0)))
 (package-initialize)
+;; quelpa
+(package-initialize)
+(unless (require 'quelpa nil t)
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
+    (eval-buffer)))
+
 ;; use use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -35,6 +42,7 @@
 (require 'cy-line-handling)
 ;; now the various packages
 (require 'cy-clojure)
+(require 'cy-reasonml)
 (require 'cy-deft)
 (require 'cy-yaml)
 (require 'cy-company)
