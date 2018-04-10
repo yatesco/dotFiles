@@ -50,7 +50,7 @@
       delete-old-versions t)
 
 ;; silence!
-(setq visible-bell 1)
+(setq visible-bell nil)
 
 ;; load some useful tools
 (use-package which-key
@@ -73,7 +73,7 @@
     :diminish evil-smartparens-mode
     :config
     (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
-  
+
   ;; also, make delimiters look purty
   ;; to highlight the block between the parameters set the following
   ;; (setq show-paren-style 'expression)
