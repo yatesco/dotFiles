@@ -148,7 +148,8 @@ command! -nargs=+ MyGrep execute 'silent grep! <args>' | copen 30
 " Leader mappings
 let mapleader = ' '
 " top level SPC mappings
-nnoremap <leader><leader> :   " save the pain of SHIFT ;
+" save the pain of SHIFT ;
+nnoremap <leader><leader> :
 nnoremap <leader><CR> :nohl<cr> " remove highlighting
 vnoremap <leader><CR> :nohl<cr>
 nnoremap <leader>/ :MyGrep      " don't nag for "Press Enter"
