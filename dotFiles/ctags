@@ -1,0 +1,15 @@
+--recurse=yes
+--exclude=.git
+--exclude=node_modules
+--exclude=out
+--exclude=resources/public
+--langdef=Clojure                                                               
+--langmap=Clojure:.clj                                                          
+--langmap=Clojure:+.cljc
+--langmap=Clojure:+.cljs                                                        
+--regex-clojure=/\([ \t]*create-ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
+--regex-clojure=/\([ \t]*def[a-z]*[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/s,symbol/   
+--regex-clojure=/\([ \t]*intern[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/v,intern/      
+--regex-clojure=/\([ \t]*ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
+--langdef=markdown
+--langmap=markdown:.mkd

@@ -1,3 +1,4 @@
+.DS_Store
 /dotFiles/emacs.d/custom.el
 /dotFiles/emacs.d/auto-save-list
 /dotFiles/emacs.d/elpa
