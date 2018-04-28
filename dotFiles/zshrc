@@ -1,11 +1,21 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="frisk"
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/coliny/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,16 +59,15 @@ ZSH_THEME="frisk"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)
 
-# CY- DO NOT include emacs as it breaks things....
-plugins=(git lein brew osx vim)
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/coliny/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -74,37 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lea="lein ancient"
-alias ler="lein repl"
-alias lef="lein figwheel"
-alias leap="lein ancient :plugins"
-alias bri="brew install"
-alias brs="brew search"
-alias brc="brew cask"
-alias brcs="brew cask search"
-alias e='emacsclient -t'
-alias ec='emacsclient -t'
-alias eg='emacsclient -c'
-alias backup='cd ~/Documents/Personal/Scripts/backup-borg; ./backup-quick.sh; cd -'
-export PATH=~/.local/bin:~/Library/Python/2.7/bin:$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export EDITOR='emacsclient -t'
-
-PATH="/Users/coliny/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/coliny/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/coliny/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/coliny/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/coliny/perl5"; export PERL_MM_OPT;
-
-export ALTERNATE_EDITOR="" # so emacsclient auto starts a daemon
-source ~/.zsh_secret

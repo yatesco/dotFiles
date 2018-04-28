@@ -2,6 +2,7 @@
 --exclude=.git
 --exclude=node_modules
 --exclude=out
+--exclude=.cljs_rhino_repl
 --exclude=resources/public
 --langdef=Clojure                                                               
 --langmap=Clojure:.clj                                                          

@@ -40,7 +40,7 @@
 ;; (use-package zenburn-theme
 ;;   :config
 ;;   (load-theme 'zenburn t))
-(add-to-list 'default-frame-alist '(background-color . "gray00"))
+;;(add-to-list 'default-frame-alist '(background-color . "gray00"))
 (load-theme 'leuven t)
 
 (use-package airline-themes

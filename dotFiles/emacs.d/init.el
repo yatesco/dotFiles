@@ -42,7 +42,7 @@
 (require 'cy-line-handling)
 ;; now the various packages
 (require 'cy-clojure)
-(require 'cy-reasonml)
+;;(require 'cy-reasonml)
 (require 'cy-deft)
 (require 'cy-yaml)
 (require 'cy-company)
@@ -50,7 +50,7 @@
 (require 'cy-evil)
 (require 'cy-fish)
 (require 'cy-ivy)
-;;(require 'cy-mail)
+(require 'cy-mail)
 (require 'cy-projectile)
 (require 'cy-project-tree)
 (require 'cy-ui)
@@ -77,3 +77,6 @@
 ;; let everyone know we are done
 (message (concat "Emacs loaded in " (emacs-init-time) ", go wild!"))
 (message "Go wild!")
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+(require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
